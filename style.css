@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'Cantarell';
+}
+video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: fill;
+    background: url('no-content.png') no-repeat center;
+    pointer-events: none;
+}
+.credit, .resoulatorClass {
+    position: fixed;
+    padding: 5px;
+    border-radius: 5px;
+    bottom: 5px;
+    color: white;
+    font-size: 12px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.credit { left: 5px; }
+.resoulatorClass { right: 5px; }
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+a {
+    color: #aaffff;
+    text-decoration: none;
+}
