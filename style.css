@@ -11,8 +11,9 @@ video {
     width: 100vw;
     height: 100vh;
     object-fit: fill;
-    background: url('source/no-content.png') no-repeat center;
-    pointer-events: none;
+    background: url('source/cat.gif') no-repeat center center fixed;
+    background-size: 100% 100%;
+    pointer-events: '';
 }
 .credit, .resoulatorClass {
     position: fixed;
