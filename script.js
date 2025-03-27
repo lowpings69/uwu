@@ -1,3 +1,4 @@
+// 27.03.25
 document.addEventListener("DOMContentLoaded", function () {
 const videos = Array.from({ length: 110 }, (_, i) => `source/videos/${i}.mp4`);
 videos[0] = "source/videos/0.mp3";
