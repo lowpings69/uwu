@@ -4,19 +4,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const bgVideo = document.getElementById('bgVideo'),
           credit_text = document.getElementById('credit_text'),
           resoulatorElement = document.getElementById('resoulatorId');
-    function setVideo(src, customCredit = null, customResoulator = null) {
+    function setVideo(src) {
         const videoName = src.split('/').pop();
         bgVideo.src = src;
-
-        if (customCredit) {
-            credit_text.innerHTML = customCredit;
-            document.title = videoName;
-        } else {
-            credit_text.innerHTML = src === 'source/videos/0.mp3'
-                ? `🎵 <a href="https://www.youtube.com/watch?v=X4DORgzndYI" target="_blank">Vibe Tracks - I Love You</a><br><br>Website by <a href="https://t.me/lowpings" target="_blank">@LowPings</a>`
-                : `🎬 ${videoName}<br><br>Thanks <a href="https://www.tiktok.com/@lyoshnka" target="_blank">@lyoshnka</a> for videos.<br>Website by <a href="https://t.me/lowpings" target="_blank">@LowPings</a>`;
-            document.title = src === 'source/videos/0.mp3' ? `🎵 ${videoName}` : `🎬 ${videoName}`;
-        }
+        credit_text.innerHTML = src === 'source/videos/0.mp3'
+            ? `🎵 <a href="https://www.youtube.com/watch?v=X4DORgzndYI" target="_blank">Vibe Tracks - I Love You</a><br><br>Website by <a href="https://t.me/lowpings" target="_blank">@LowPings</a>`
+            : `🎬 ${videoName}<br><br>Thanks <a href="https://www.tiktok.com/@lyoshnka" target="_blank">@lyoshnka</a> for videos.<br>Website by <a href="https://t.me/lowpings" target="_blank">@LowPings</a>`;
+        document.title = src === 'source/videos/0.mp3' ? `🎵 ${videoName}` : `🎬 ${videoName}`;
         bgVideo.style.background = src === 'source/videos/0.mp3' ? '' : 'none';
     }
     function createDebugMode() {
@@ -87,7 +81,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const isDebugMode = new URLSearchParams(window.location.search).has("debug");
     if (isDebugMode) createDebugMode();
     if (isMorning) {
-        setVideo("source/videos/postthisмяумяуeveryweek.mp4", "Post this мяу-мяу every week");
+        setVideo("source/videos/postthisмяумяуeveryweek.mp4");
     } else {
         const initialId = getVideoIdFromUrl();
         setVideo(videos[initialId]);
