@@ -1,7 +1,7 @@
 // 27.03.25
 document.addEventListener("DOMContentLoaded", function () {
-const videos = Array.from({ length: 110 }, (_, i) => `source/videos/${i}.mp4`);
-videos[0] = "source/videos/0.mp3";
+const videos = Array.from({ length: 1 }, (_, i) => `source/videos/${i}.mp4`);
+videos[0] = "source/videos/0.mp4";
 const bgVideo = document.getElementById('bgVideo'),
 credit_text = document.getElementById('credit_text'),
 resoulatorElement = document.getElementById('resoulatorId');
